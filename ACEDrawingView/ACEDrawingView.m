@@ -432,8 +432,9 @@
     [self touchesMoved:touches withEvent:event];
     
     if ([self.currentTool isKindOfClass:[ACEDrawingDraggableTextTool class]]) {
-        [self.draggableTextView hideEditingHandles];
-        if (!self.draggableTextView.isEditing) {
+        if (self.draggableTextView.isEditing) {
+            [self.draggableTextView hideEditingHandles];
+        } else {
             CGPoint point = [[touches anyObject] locationInView:self];
             [self.currentTool setInitialPoint:point];
             self.draggableTextView = ((ACEDrawingDraggableTextTool *)self.currentTool).labelView;
