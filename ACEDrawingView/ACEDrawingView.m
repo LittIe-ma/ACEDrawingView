@@ -440,8 +440,6 @@
             self.draggableTextView = ((ACEDrawingDraggableTextTool *)self.currentTool).labelView;
             
             [self.pathArray addObject:self.currentTool];
-            
-            [self finishDrawing];
         }
     } else {
         [self finishDrawing];
