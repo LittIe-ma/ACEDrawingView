@@ -355,7 +355,7 @@
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    if (self.draggableTextView.isEditing) {
+    if (self.draggableTextView.isEditing && self.drawTool != ACEDrawingToolTypeDraggableText) {
         [self.draggableTextView hideEditingHandles];
     }
     
