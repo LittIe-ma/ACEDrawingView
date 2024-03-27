@@ -382,6 +382,7 @@ CG_INLINE CGSize CGAffineTransformGetScale(CGAffineTransform t)
 
 - (void)contentTapped:(UITapGestureRecognizer*)tapGesture
 {
+    NSLog(@"debugprint: contentTapped isShowingEditingHandles = %@", self.isShowingEditingHandles ? @"YES" : @"NO");
     if (self.isShowingEditingHandles) {
         [self hideEditingHandles];
         [self.superview bringSubviewToFront:self];
@@ -402,6 +403,7 @@ CG_INLINE CGSize CGAffineTransformGetScale(CGAffineTransform t)
 - (void)moveGesture:(UIPanGestureRecognizer *)recognizer
 {
     if (!self.isShowingEditingHandles) {
+        NSLog(@"debugprint: moveGesture");
         [self showEditingHandles];
     }
     self.touchLocation = [recognizer locationInView:self.superview];
@@ -522,6 +524,7 @@ CG_INLINE CGSize CGAffineTransformGetScale(CGAffineTransform t)
 #pragma mark - UITextField UIControlEvent
 - (void)textFieldEditingChanged:(UITextField *)textField {
     if (!self.isShowingEditingHandles) {
+        NSLog(@"debugprint: textFieldEditingChanged");
         [self showEditingHandles];
     }
     [textField adjustsWidthToFillItsContents];
