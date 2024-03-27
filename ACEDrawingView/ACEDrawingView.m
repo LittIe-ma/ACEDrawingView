@@ -216,6 +216,7 @@
 
 - (void)finishDrawing
 {
+    NSLog(@"debugprint: finishDrawing")
     // update the image
     [self updateCacheImage:NO];
     
