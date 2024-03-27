@@ -344,7 +344,8 @@ CG_INLINE CGSize CGAffineTransformGetScale(CGAffineTransform t)
     [self.labelTextField resignFirstResponder];
     
     [self refresh];
-    
+    NSLog(@"debugprint: hideEditingHandles showEditingHandles = %@", self.showEditingHandles ? @"YES" : @"NO");
+
     if([self.delegate respondsToSelector:@selector(labelViewDidHideEditingHandles:)]) {
         [self.delegate labelViewDidHideEditingHandles:self];
     }
