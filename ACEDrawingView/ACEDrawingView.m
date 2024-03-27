@@ -703,6 +703,7 @@
 
 - (void)labelViewDidHideEditingHandles:(ACEDrawingLabelView *)label
 {
+    NSLog(@"debugprint: labelViewDidHideEditingHandles");
     ACEDrawingDraggableTextTool *tool = [self draggableTextToolForLabel:label];
     
     if (![tool.labelView.textValue stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]].length) {
@@ -722,6 +723,7 @@
         
         // call the delegate
         if ([self.delegate respondsToSelector:@selector(drawingView:didEndDrawUsingTool:)]) {
+            NSLog(@"debugprint: labelViewDidHideEditingHandles_delegate");
             [self.delegate drawingView:self didEndDrawUsingTool:tool];
         }
     }
