@@ -100,12 +100,14 @@ CG_INLINE CGSize CGAffineTransformGetScale(CGAffineTransform t)
 
 -(void)didMoveToSuperview
 {
+    NSLog(@"debugprint: didMoveToSuperview_refresh");
     [super didMoveToSuperview];
     [self refresh];
 }
 
 - (void)setFrame:(CGRect)newFrame
 {
+    NSLog(@"debugprint: setFrame_refresh");
     [super setFrame:newFrame];
     [self refresh];
 }
@@ -363,7 +365,7 @@ CG_INLINE CGSize CGAffineTransformGetScale(CGAffineTransform t)
         
     if (self.isEnableClose)       self.closeButton.hidden = NO;
     if (self.isEnableRotate)      self.rotateButton.hidden = NO;
-    
+    NSLog(@"debugprint: showEditingHandles_refresh");
     [self refresh];
     
     if ([self.delegate respondsToSelector:@selector(labelViewDidShowEditingHandles:)]) {
