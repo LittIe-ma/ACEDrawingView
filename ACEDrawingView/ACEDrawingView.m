@@ -358,7 +358,7 @@
     if (self.draggableTextView.isEditing && self.drawTool != ACEDrawingToolTypeDraggableText) {
         [self.draggableTextView hideEditingHandles];
     }
-    NSLog(@"debugprint: draggableTextView.isEditing = %@, drawTool = %ld", self.draggableTextView.isEditing ? @"YES" : @"NO", (long)self.drawTool);
+    NSLog(@"debugprint: touchesBegan draggableTextView.isEditing = %@, drawTool = %ld", self.draggableTextView.isEditing ? @"YES" : @"NO", (long)self.drawTool);
 
     // add the first touch
     UITouch *touch = [touches anyObject];
@@ -433,6 +433,7 @@
     [self touchesMoved:touches withEvent:event];
     
     if ([self.currentTool isKindOfClass:[ACEDrawingDraggableTextTool class]]) {
+        NSLog(@"debugprint: touchesEnded draggableTextView.isEditing = %@",self.draggableTextView.isEditing ? @"YES" : @"NO");
         if (self.draggableTextView.isEditing) {
             [self.draggableTextView hideEditingHandles];
         } else {

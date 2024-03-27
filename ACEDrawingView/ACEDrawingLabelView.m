@@ -86,7 +86,8 @@ CG_INLINE CGSize CGAffineTransformGetScale(CGAffineTransform t)
         CGAffineTransform t = CGAffineTransformMakeScale(scale.width, scale.height);
         [self.closeButton setTransform:CGAffineTransformInvert(t)];
         [self.rotateButton setTransform:CGAffineTransformInvert(t)];
-        
+        NSLog(@"debugprint: refresh isShowingEditngHandles = %@", self.isShowingEditingHandles ? @"YES" : @"NO");
+
         if (self.isShowingEditingHandles) {
             [self.labelTextField.layer addSublayer:self.border];
         } else {
