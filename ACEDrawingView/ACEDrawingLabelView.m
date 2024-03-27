@@ -93,6 +93,8 @@ CG_INLINE CGSize CGAffineTransformGetScale(CGAffineTransform t)
         } else {
             [self.border removeFromSuperlayer];
         }
+    } else {
+      NSLog(@"debugprint: refresh superview is nil");
     }
 }
 
