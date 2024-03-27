@@ -342,9 +342,9 @@ CG_INLINE CGSize CGAffineTransformGetScale(CGAffineTransform t)
     if (self.isEnableRotate)      self.rotateButton.hidden = YES;
     
     [self.labelTextField resignFirstResponder];
-    
+    NSLog(@"debugprint: hideEditingHandles showEditingHandles = %@, isEnableClose = %@", self.showEditingHandles ? @"YES" : @"NO", self.isEnableClose ? @"YES" : @"NO");
+
     [self refresh];
-    NSLog(@"debugprint: hideEditingHandles showEditingHandles = %@", self.showEditingHandles ? @"YES" : @"NO");
 
     if([self.delegate respondsToSelector:@selector(labelViewDidHideEditingHandles:)]) {
         [self.delegate labelViewDidHideEditingHandles:self];
