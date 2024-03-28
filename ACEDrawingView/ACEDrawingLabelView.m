@@ -390,10 +390,10 @@ CG_INLINE CGSize CGAffineTransformGetScale(CGAffineTransform t)
 //    } else {
 //        [self showEditingHandles];
 //    }
-
-    if (!self.isShowingEditingHandles) {
-      [self showEditingHandles];
-    }
+//
+//    if (!self.isShowingEditingHandles) {
+//      [self showEditingHandles];
+//    }
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
