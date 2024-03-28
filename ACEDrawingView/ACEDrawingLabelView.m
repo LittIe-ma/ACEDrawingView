@@ -168,12 +168,12 @@ CG_INLINE CGSize CGAffineTransformGetScale(CGAffineTransform t)
         [self addSubview:self.rotateButton];
 
         [self applyLayout];
-        
-        UIPanGestureRecognizer *moveGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveGesture:)];
-        [self addGestureRecognizer:moveGesture];
-        
+
         UITapGestureRecognizer *singleTapShowHide = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(contentTapped:)];
         [self addGestureRecognizer:singleTapShowHide];
+
+        UIPanGestureRecognizer *moveGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveGesture:)];
+        [self addGestureRecognizer:moveGesture];
         
         UITapGestureRecognizer *closeTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeTap:)];
         [self.closeButton addGestureRecognizer:closeTap];
