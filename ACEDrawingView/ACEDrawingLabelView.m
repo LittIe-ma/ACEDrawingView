@@ -376,9 +376,9 @@ CG_INLINE CGSize CGAffineTransformGetScale(CGAffineTransform t)
 
 - (void)contentTapped:(UITapGestureRecognizer*)tapGesture
 {
-  if (tapGesture.view == self.labelTextField && !self.isShowingEditingHandles) {
-    [self showEditingHandles];
-  }
+    if (tapGesture.view == self.labelTextField && !self.isShowingEditingHandles) {
+      [self showEditingHandles];
+    }
 }
 
 - (void)closeTap:(UITapGestureRecognizer *)recognizer
