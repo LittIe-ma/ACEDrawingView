@@ -167,8 +167,8 @@ CG_INLINE CGSize CGAffineTransformGetScale(CGAffineTransform t)
         [self addGestureRecognizer:moveGesture];
         
         UITapGestureRecognizer *singleTapShowHide = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(contentTapped:)];
-        [self addGestureRecognizer:singleTapShowHide];
-        
+        [self.labelTextField addGestureRecognizer:singleTapShowHide];
+
         UITapGestureRecognizer *closeTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeTap:)];
         [self.closeButton addGestureRecognizer:closeTap];
         
@@ -376,11 +376,8 @@ CG_INLINE CGSize CGAffineTransformGetScale(CGAffineTransform t)
 
 - (void)contentTapped:(UITapGestureRecognizer*)tapGesture
 {
-    if (self.isShowingEditingHandles) {
-        [self hideEditingHandles];
-        [self.superview bringSubviewToFront:self];
-    } else {
-        [self showEditingHandles];
+    if (tapGesture.view == self.labelTextField && !self.isShowingEditingHandles) {
+      [self showEditingHandles];
     }
 }
 
