@@ -382,7 +382,7 @@ CG_INLINE CGSize CGAffineTransformGetScale(CGAffineTransform t)
 
 - (void)contentTapped:(UITapGestureRecognizer*)tapGesture
 {
-    NSLog(@"debugprint: contentTapped isSelf = %@", tapGesture.view == self ? @"YES" : @"NO");
+    NSLog(@"debugprint: contentTapped isSelf = %@", tapGesture.view == self.labelTextField ? @"YES" : @"NO");
 //    NSLog(@"debugprint: contentTapped isShowingEditingHandles = %@, showEditingHandles = %@, state = %ld", self.isShowingEditingHandles ? @"YES" : @"NO", self.showEditingHandles ? @"YES" : @"NO", (long)tapGesture.state);
 //    if (self.isShowingEditingHandles) {
 //        [self hideEditingHandles];
