@@ -381,8 +381,9 @@ CG_INLINE CGSize CGAffineTransformGetScale(CGAffineTransform t)
 
 #pragma mark - Gestures
 
-//- (void)contentTapped:(UITapGestureRecognizer*)tapGesture
-//{
+- (void)contentTapped:(UITapGestureRecognizer*)tapGesture
+{
+    NSLog(@"debugprint: contentTapped isSelf = %@", tapGesture.view == self ? @"YES" : @"NO");
 //    NSLog(@"debugprint: contentTapped isShowingEditingHandles = %@, showEditingHandles = %@, state = %ld", self.isShowingEditingHandles ? @"YES" : @"NO", self.showEditingHandles ? @"YES" : @"NO", (long)tapGesture.state);
 //    if (self.isShowingEditingHandles) {
 //        [self hideEditingHandles];
@@ -394,7 +395,7 @@ CG_INLINE CGSize CGAffineTransformGetScale(CGAffineTransform t)
 //    if (!self.isShowingEditingHandles) {
 //      [self showEditingHandles];
 //    }
-//}
+}
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
