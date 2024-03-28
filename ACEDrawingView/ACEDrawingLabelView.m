@@ -168,8 +168,8 @@ CG_INLINE CGSize CGAffineTransformGetScale(CGAffineTransform t)
 
         [self applyLayout];
 
-        UITapGestureRecognizer *singleTapShowHide = [[UITapGestureRecognizer alloc] initWithTarget:self.labelTextField action:@selector(contentTapped:)];
-        [self addGestureRecognizer:singleTapShowHide];
+        UITapGestureRecognizer *singleTapShowHide = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(contentTapped:)];
+        [self.labelTextField addGestureRecognizer:singleTapShowHide];
 
         UIPanGestureRecognizer *moveGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveGesture:)];
         [self addGestureRecognizer:moveGesture];
