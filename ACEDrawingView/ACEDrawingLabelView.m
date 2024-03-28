@@ -396,14 +396,6 @@ CG_INLINE CGSize CGAffineTransformGetScale(CGAffineTransform t)
 //    }
 }
 
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    NSLog(@"debugprint: ACEDrawingLabelView_touchesEnded");
-//  if (!self.isShowingEditingHandles) {
-//    [self showEditingHandles];
-//  }
-}
-
 - (void)closeTap:(UITapGestureRecognizer *)recognizer
 {
     [self removeFromSuperview];
@@ -520,7 +512,7 @@ CG_INLINE CGSize CGAffineTransformGetScale(CGAffineTransform t)
     if (self.isShowingEditingHandles) {
         return YES;
     }
-//    [self contentTapped:nil];
+    [self contentTapped:nil];
     return NO;
 }
 
