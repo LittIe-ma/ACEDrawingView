@@ -382,7 +382,7 @@ CG_INLINE CGSize CGAffineTransformGetScale(CGAffineTransform t)
 
 - (void)contentTapped:(UITapGestureRecognizer*)tapGesture
 {
-    NSLog(@"debugprint: contentTapped isShowingEditingHandles = %@", self.isShowingEditingHandles ? @"YES" : @"NO");
+    NSLog(@"debugprint: contentTapped isShowingEditingHandles = %@, showEditingHandles = %@", self.isShowingEditingHandles ? @"YES" : @"NO", self.showEditingHandles ? @"YES" : @"NO");
     if (self.isShowingEditingHandles) {
         [self hideEditingHandles];
         [self.superview bringSubviewToFront:self];
