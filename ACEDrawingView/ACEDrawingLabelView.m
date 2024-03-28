@@ -119,7 +119,6 @@ CG_INLINE CGSize CGAffineTransformGetScale(CGAffineTransform t)
     
     self = [super initWithFrame:frame];
     if (self) {
-        self.userInteractionEnabled = YES;
         self.labelTextField = [[UITextField alloc] initWithFrame:CGRectZero];
         self.border = [CAShapeLayer layer];
 
