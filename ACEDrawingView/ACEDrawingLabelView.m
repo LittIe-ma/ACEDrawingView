@@ -397,7 +397,7 @@ CG_INLINE CGSize CGAffineTransformGetScale(CGAffineTransform t)
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    NSLog(@"debugprint: ACEDrawingLabelView_touchesEnded")
+    NSLog(@"debugprint: ACEDrawingLabelView_touchesEnded");
 //  if (!self.isShowingEditingHandles) {
 //    [self showEditingHandles];
 //  }
