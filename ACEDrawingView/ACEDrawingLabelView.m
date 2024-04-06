@@ -292,6 +292,7 @@ CG_INLINE CGSize CGAffineTransformGetScale(CGAffineTransform t)
     if (name.length > 0) {
         _fontName = name;
         self.labelTextField.font = [UIFont fontWithName:_fontName size:self.fontSize];
+        self.labelTextField.font = [UIFont systemFontOfSize:self.fontSize weight:UIFontWeightMedium];
         [self.labelTextField adjustsWidthToFillItsContents];
     }
 }
@@ -300,6 +301,7 @@ CG_INLINE CGSize CGAffineTransformGetScale(CGAffineTransform t)
 {
     _fontSize = size;
     self.labelTextField.font = [UIFont fontWithName:self.fontName size:_fontSize];
+    self.labelTextField.font = [UIFont systemFontOfSize:_fontSize weight:UIFontWeightMedium];
 }
 
 - (void)setTextColor:(UIColor *)color
