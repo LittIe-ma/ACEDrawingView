@@ -137,7 +137,6 @@ CG_INLINE CGSize CGAffineTransformGetScale(CGAffineTransform t)
         self.labelTextField.backgroundColor = [UIColor clearColor];
         self.labelTextField.tintColor = [UIColor redColor];
         self.labelTextField.textColor = [UIColor whiteColor];
-        self.labelTextField.font = [UIFont systemFontOfSize:17 weight:UIFontWeightMedium];
         self.labelTextField.text = @"";
         [self.labelTextField addTarget:self action:@selector(textFieldEditingChanged:) forControlEvents:UIControlEventEditingChanged];
 
