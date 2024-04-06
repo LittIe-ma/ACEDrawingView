@@ -226,7 +226,7 @@ CGPoint midPoint(CGPoint p1, CGPoint p2)
 - (void)configureLabelView
 {
     _labelView.delegate     = self.drawingView;
-    _labelView.fontSize     = 18.0;
+    _labelView.fontSize     = 20.0;
     _labelView.textColor    = self.lineColor;
     _labelView.fontName     = self.drawingView.draggableTextFontName ?: [UIFont systemFontOfSize:_labelView.fontSize].fontName;
     _labelView.closeImage   = self.drawingView.draggableTextCloseImage;
